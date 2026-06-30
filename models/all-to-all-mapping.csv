@@ -1,0 +1,84 @@
+Dublin Core,Can filter at TeSS exchange,Filter comment,TeSS Material property,TeSS Event property,Property comment,DC ingestion comment,EOSC Training Property 2024,EOSC comment,Minimum metadata model 2026 Material,Minimum metadata model 2026 Event,MMM 2026 Expected Schemaorg Type,MMM 2026 Cardinality,MMM 2026 Values / CV,MMM 2026 Material Required,MMM 2026 Event Required,Bioschemas property in TrainingMaterial,Bioschemas property in CourseInstance,Bioschemas serialised by TeSS,Bioschemas subproperties,Bioschemas notes,DReSA Material property,DReSA Event property,DReSA comment,SciLifeLab Material property,SciLifeLab Event property,SciLifeLab comment,RDA Learning Resource Minimum 2021,RDA Description
+dc:type,matches,,Resource type(s),Event Type,,"if include http://purl.org/dc/dcmitype/Event
+then TeSS Event else TeSS Material",Learning Resource Type,,Learning Resource Type,Event type [or Course Mode],Text,ONE,,Required,Required,learningResourceType,type,yes MATERIALS,,"EVENTS: ""Course"" and ""CourseInstance""s will automatically be given the ""Workshops and courses"" type.",Resource type(s),Event Type,"MAT: 24 options. 
+EVE: 6 options",,,,Learning Resource Type,The predominant type or kind that characterizes the learning resource.
+dc:title,matches,,Title,Title,,,Title,,Title,Title,Text,ONE,,Required,Required,name,name,yes,,,Title,Title,,Title,Title,,Title,The human readable name of the resource.
+dc:identifier,"matches, prefix",,URL,URL,,if http(s),URL to Resource,,URL to Resource,URL to Course,URL,ONE,,Required,Required,url,url,yes,,,URL,URL,,URL to OER,URL to OER,,URL to Resource,"URL that resolves to the learning resource or to a ""landing page"" for the resource that contains important contextual information including the direct resolvable link to the resource, if applicable."
+dc:description,"matches, contains",,Description,Description,,convert text,Abstract/Description,,Abstract/Description,Abstract/Description,Text,ONE,,Required,Required,description,description,yes,,,Description,Description,,Description/abstract,Description/abstract,,Abstract / Description,A brief synopsis about or description of the learning resource.
+dc:publisher,,,Contact,Contact,,,,,,,,,,,, -,contact,no,"name, email","EVENTS: Turned into ""name - email""",Contact,Contact,,,,,,
+dc:creator,,Should add,Authors,Organizer,Should extend (roles),,Author(s),,Author(s),Organizer [or Instructor(s)],"Person
+Organization",MANY,"Person: Name, URL (ORCID if exists).
+Organization: Name, URL (ROR if exists)",Recommended,Recommended,author,organizer,yes,name [name. url for EVENTS],"EVENTS: Turned into ""name (url)""",Authors,Organizer,,Authors,,,Author(s),Name of entity(ies) authoring the resource.
+dc:subject,matches,,Keywords,Keywords,,,Keyword(s),,Keyword(s),Keyword(s),"DefinedTerm
+Text
+URL",ONE,Free text keywords are delimited by commas.,Required,Required,keywords,keywords,yes,name (or direct),"If it has a single value, will attempt to split on commas",Keywords,Keywords,,Keywords,Keywords,,Keywords,Keywords or tags used to describe the resource.
+dc:date,,,Date created,Start,,earliest date found,,,Date Created,Start Date,"Date
+DateTime",ONE,ISO 8601,,Recommended,dateCreated,startDate,yes,,,Date created,Start,,Date created,,,,
+dc:date,,Could add,Date modified,End,,lastest date found,Version Date,,Date Modified,End Date,"Date
+DateTime","Material: ONE
+Event: MANY",ISO 8601,,Required,dateModified,endDate,yes,,,Date modified,End,,Date modified,,,Version Date,Version date for the most recently published or broadcast resource.
+dc:contributor,,Should add (with Author),Contributors,Contributors,Should extend (roles),,,,Contributor(s)* [see Author(s)],Contrutor(s),"Person
+Organization",MANY,"Person: Name, URL (ORCID if exists).
+Organization: Name, URL (ROR if exists)",Recommended,Recommended,contributor,,yes MATERIALS,name,,Contributors,,,Contributors,,,,
+dc:rights,matches,,Licence,License,Should add to Event,,License,,License,,"CreativeWork
+URL",ONE,OSI,Required if exists,,license,,yes MATERIALS,,,Licence,,,Licensing and (re)use details,,Drop-down with common,Licence,"A license document that applies to this content, typically indicated by URL"
+dc:identifier,matches,,DOI,Identifier,Should address for Events,if doi; store as URI,,,DOI,Identifier,"PropertyValue
+Text
+URL",ONE,URL of DOI or equivalent identifier,Required if exists,Required if exists,identifier,,yes MATERIALS,,,DOI,,,DOI,,,,
+,matches,,Target audiences,Target audiences,,,Target Group (Audience),,Target Group (Audience),Target Group (Audience),Text,MANY,,Recommended,Recommended,audience,audience,yes,"educationalRole, audienceType or name",,Target audiences,Target audiences,,Target audiences,Target audiences,,Target Group (Audience),Principal users(s) for which the resource was designed.
+,,,Learning objectives,Learning objectives,,,Learning Outcome(s),,Learning Outcome(s),Learning Outcome(s),Text,MANY,It is recommended that you utilize terms from the Blooms taxonomy,Recommended,Recommended,teaches,teaches,yes,name (or direct),Multiple values are turned into a markdown bulleted list,Learning objectives,Learning objectives,,Learning outcomes,Learning outcomes,,Learning Outcome(s),"Descriptions of what knowledge, skills or abilities a learner should acquire on completion of the resource."
+,matches,,Competency level,,,,Expertise Level,,Expertise Level,Expertise Level,"DefinedTerm
+Text
+URL",ONE,"Example from ELIXIR: Beginner, Intermediate, Advanced.
+Example from DALIA: Novice, Beginner, Competent, Proficient, Expert.
+Example from DReSA and DIRECT: Awareness, Working, Practitioner, Expert.",Recommended,Recommended,educationalLevel,,yes MATERIALS,name (or direct),"Currently will only accept: ""beginner"", ""intermediate"", ""advanced""",Competency level,,,Expertise (skill) level,,,Expertise (Skill) Level,"Target skill level in the topic being taught; example values include: beginner, intermediate, advanced."
+,,,,,,,Resource URL Type,"It represents the type of the URL of the resource, that is the used scheme (e.g., Web Address URL, DOI, ARK, etc.). ",,,,,,,,,,,,,,,,,,,Resource URL Type,"Designation of the identifier scheme used for the resource URL , e.g., DOI, ARK, Handle."
+?,,Could add,Cost basis,Cost basis,Should add to Event,,Access Cost,,Access Cost,Access Cost,Text ,ONE,"Value and currency eg ""50 GBP""",Recommended,Recommended,,,,,EVENTS: missing offers from serialize,,Cost basis,,,Access cost,,Access Cost,Access cost: Choice stating whether or not there is a fee for use of the resource (CV = Y/N/Maybe with recommendation that further explanation of “Maybe” goes in the Description field for “It depends” or “It changes” explanations).
+dc:language,,Must extend,inLanguage,inLanguage,Must add to Material,,Primary Language,,Primary Language,Primary Language,"Language
+Text",MANY,IETF BCP 47,Recommended,Recommended,,,,,EVENTS: missing inLanguage from serialize,,,,Language,Language,,Primary language,Language in which the resource was originally published or made available.
+dc:subject,,Must add,Scientific Topics,Scientific Topics,"Must address (CV, lookup)",,,,Scientific Topic(s) / Field(s) of Research,Scientific Topic(s) / Field(s) of Research,Text,MANY,"Varies by instance, eg EDAM (ELIXIR), PaNET (PaNOSC).",,,about,about,yes,name (or direct - see notes),"Takes the ""name"" property if it is on a ""DefinedTerm"". Takes the value from ""about"" if its a URI starting with ""http://edamontology.org""",Fields of Research,Fields of Research,Refer to ANZSRC,,Topic(s),"Tags like DDLS, PM",,
+,,,Status,,,,,,,,,,,,,creativeWorkStatus,,yes MATERIALS,,,Status,,,Status,,,,
+,,,Version,,,,,,,,,,,,,version,,yes MATERIALS,,,Version,,,Version,,,,
+?,,Should add,Content Provider,Content Provider,Must extend (ROR),,,,Content Provider,Content Provider,Organization,ONE,"Organization: Name, URL (ROR if exists)",Recommended,Recommended, -, -,yes,,The content provider is set automatically by TeSS,Content Provider,,,Content Provider,Content Provider,,,
+,contains,,Prerequisites,Prerequisites,,,,,,,,,,,,competencyRequired,coursePrerequisites,yes,"name (or direct) MATERIAL; targetName, targetUrl, name, url EVENT","Multiple values are turned into a markdown bulleted list; Will be turned into a markdown link if ""url"" or ""targetUrl"" are provided",Prerequisites,Prerequisites,,Prerequisites - knowledge,Prerequisites - knowledge,Two properties (knowledge and technical),,
+?,,Could add (with Version),Date published,,Could link with Version,,,,,,,,,,,datePublished,,yes MATERIALS,,,Date published,,,Date published,,,,
+,,,Nodes,Nodes,,,,,,,,,,,,provider,provider,yes,name,"Only if the provider is an ""Organization""",,,,,,,,
+,,,Events,,,,,,,,,,,,, -,,no,,,Events,,,Events,,,,
+,,,Operations,Operations,,,,,,,,,,,, - , - ,no,,,,,,,,,,
+?,,Should add (external tool),External resources,External resources,,,,,External Resources,External Resources,Thing,MANY,"Thing: Name, URL",Recommended,Recommended,mentions,mentions,yes,"name, url","EVENTS: Only available on ""Course""",External resources,,,,Associatted resources,,,
+,matches,,,Timezone,,,,,,Timezone,Text,ONE,RFC 822 4-digit time zone [TBC],,Recommended,, - ,no,,,,Timezone,,,,,,
+,,,,Duration,,,,,,,,,,,,,duration,no,,,,,,,Duration,,,
+,,,,Venue,,,,,,Location [Venue],Text ,ONE,(name and optional street address),,Required,,location,yes EVENTS,"Direct, or name + streetAddress","Will appear as ""name, streetAddress"" if both are provided",,Venue,,,Venue,,,
+,matches,,,City,,,,,,Location [City],Text,ONE,,,Recommended,,location,yes EVENTS,addressLocality,"Address fields can be provided as a ""PostalAddress"" under the ""location"", or a ""Place"" which itself has an ""address"" which is a ""PostalAddress""",,City,,,City,,,
+,,,,Region,,,,,,,,,,,,,location,yes EVENTS,addressRegion,https://schema.org/Place,,,,,,,,
+,matches,,,Country,,,,,,Location [Country],Text,ONE,ISO 3166 2-character,,Recommended,,location,yes EVENTS,addressCountry,https://schema.org/PostalAddress,,Country,,,Country,,,
+,,,,Postcode,,,,,,,,,,,,,location,yes EVENTS,postalCode,,,,,,,,,
+,,,,Latitude,,,,,,,,,,,,,location,yes EVENTS,geo -> latitude,"geo is only available under ""Place""",,,,,,,,
+,,,,Longitude,,,,,,,,,,,,,location,yes EVENTS,geo -> longitude,"geo is only available under ""Place""",,,,,,,,
+,,,,Eligibility,,,,,,,,,,,,, - ,no,,,,,,,,,,
+,,,,Host institutions,,,,,,Host Institutions,,MANY,,,,,hostInstitution,"yes, but as provider EVENTS",name,,,Host institutions,,,,,,
+,,,,Capacity,,,,,,,,,,,,,maximumAttendeeCapacity,yes EVENTS,,,,Capacity,,,,,,
+,,,,Type,,,,,,Event type [or Course Mode],"Text
+URL",MANY,"Text or URL, see examples here or https://zenodo.org/records/166378#.YrHnEi8iu-o",,Required,,courseMode (or location - see notes),yes EVENTS,,"EVENTS: If the text ""online"" appears in the value, event will be set to ""Online"" in TeSS, otherwise ""Face-to-face"". Hybrid is currently not supported. Will also be set to ""Online"" if ""location"" is using the type ""VirtualLocation""",,Online,"True/False, create 2 events for hybrid.",,Type,3 values,,
+,,,,Tech requirements,,,,,,,,,,,,, - ,no,,,,,,,,,,
+,,,,Credit/recognition,,,,,,,,,,,,, - ,no,,,,,,,,,,
+,,,,Sponsors,,,,,,,,,,,,,sponsor or funder,yes EVENTS,name,,,,,,,,,
+,"matches, contains",,,Subtitle,,,,,,,,,,,,,alternateName,yes EVENTS,,,,,,,,,,
+?,,,Project,Project,"Must add (RAID, name)",,,,Project,Project,Project,MANY,"Organization: Name, URL (RAID PID if exists)",Required if exists,Required if exists,,,,,,,,,,,,,
+?,,,Funder,Funder,Must add (Dataverse requires),,,,Funder,Funder,Organization,MANY,"Organization: Name, URL (ROR if exists)",Required if exists,Required if exists,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,Other types,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,Subsets,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,Syllabus,,,,,,,
+?,,,,Eligibility,Must add to support DReSA,,,,,Eligibility,Text,MANY,At least one of: Open to all; Host institutions; Expression of interest; By invitation,,,,,,,,,Eligibility,"Text, semicolon separated: Open to all; Host institutions; Expression of interest; By invitation",,,,,
+,,,,,,,,,,,,,,,,,,,,,,Tech requirements,,,,,,
+,,,,,,,,,,,,,,,,,author,,,,,,,Author contact details,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,Application deadline,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,SciLifeLab affiliation,,,,
+,,,,,,,,,,,,,,,,,timeRequired,,,,,,,,Structure and duration,,,
+,,,,,,,,,,,,,,,,,,,,,,,,Prerequisites - technical,Prerequisites - technical,Two properties (knowledge and technical),,
+,,,,,,,,,,,,,,,,,,,,,,,,Additional information,,About reuse and delivery,,
+,,,,,,,,,,,,,,,,,,,,,,,,Assessment,,eLearning only,,
+,,,,,,,,,,,,,,,,,,,,,,,,Advancement,,eLearning only,,
+,,,,,,,,,,,,,,,,citation,,,,,,,,Preferred citation,,,,
+,,,,,,,,,,,,,,,,contributor,,,,,,,,Modification contact person,,,,
+,,,,Instructors,,,,,,Instructor(s),Person,MANY,"Person: Name, URL (ORCID if exists).",,Recommended,instructor,,,,,,,,,,,,
