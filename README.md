@@ -116,6 +116,8 @@ The columns in the full model are grouped as follows:
 
 A technical requirements document has been provided to the TeSSHub development team to implement the properties are new or modified for this model. This work will be conducted as part of the mTeSS-X and TeSSHub4EOSC projects, under the broader TeSS Platform governance.
 
+A proposal will be made to the Bioschemas Training Group to adopt the recommended changes to the `TrainingMaterial` and `CourseInstance` profiles in future versions. 
+
 
 ## Acknowledgements
 - [mTeSS-X](https://elixirtess.github.io/mTeSS-X/): Scaling training portal federation for RIs through Multi-tenanting and Exchange ([OSCARS](https://www.oscars-project.eu/projects/mtess-x-scaling-training-portal-federation-ris-through-multi-tenanting-and-exchange))
