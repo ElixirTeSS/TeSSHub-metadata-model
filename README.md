@@ -1,4 +1,6 @@
 # TeSSHub metadata model
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21176106.svg)](https://doi.org/10.5281/zenodo.21176106)
+
 Minimum metadata model and all-to-all exchange for the TeSS Platform, suitable for federation with EOSC.
 
 This model is the output from a series of online workshops where we define the metadata model used in the TeSS Platform for exchange with other training registries in any domain. We started with the mapping work from the mTeSS-X focus group then refined the outputs over events in February, March and May 2026. The goal was to reach a consensus of a minimum metadata model for exchange (all-against-all) that is appropriate for the federation of learning materials across EOSC. 

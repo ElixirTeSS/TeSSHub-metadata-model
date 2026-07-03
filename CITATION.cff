@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+title: TeSSHub metadata model
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Phil
+    family-names: Reed
+    email: phil.reed@manchester.ac.uk
+    affiliation: The University of Manchester
+    orcid: 'https://orcid.org/0000-0002-4479-715X'
+  - given-names: Munazah
+    family-names: Andrabi
+    email: munazah.andrabi@manchester.ac.uk
+    affiliation: The University of Manchester
+    orcid: 'https://orcid.org/0000-0002-7718-5109'
+  - given-names: Finn
+    family-names: Bacall
+    email: finn.bacall@manchester.ac.uk
+    affiliation: The University of Manchester
+    orcid: 'https://orcid.org/0000-0002-0048-3300'
+  - given-names: Kenneth
+    family-names: Rioja
+    orcid: 'https://orcid.org/0000-0002-5177-0019'
+    affiliation: CERN
+    email: kenneth.brian.rioja@cern.ch
+  - given-names: Martin
+    family-names: Voigt
+    email: m.voigt@hzdr.de
+    affiliation: Helmholtz-Zentrum Dresden-Rossendorf
+    orcid: 'https://orcid.org/0000-0001-5556-838X'
+  - given-names: Oliver
+    family-names: Knodel
+    email: o.knodel@hzdr.de
+    affiliation: Helmholtz-Zentrum Dresden-Rossendorf
+    orcid: 'https://orcid.org/0000-0001-8174-7795'
+  - given-names: Carole
+    family-names: Goble
+    email: carole.goble@manchester.ac.uk
+    affiliation: The University of Manchester
+    orcid: 'https://orcid.org/0000-0003-1219-2137'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21176106
+    description: TeSSHub metadata model
+repository-code: 'https://github.com/ElixirTeSS/TesSHub-metadata-model'
+url: 'https://github.com/ElixirTeSS/TesSHub-metadata-model'
+abstract: All-to-all mapping of the TeSS metadata model and minimum model suitable for exchange of training materials for EOSC
+keywords:
+  - TeSS
+  - mTeSS-X
+  - TeSSHub
+  - TeSSHub4EOSC
+  - EOSC
+  - minimum metadata model
+license: MIT
+version: 'v0.2_DRAFT'
+date-released: '2026-07-03'
