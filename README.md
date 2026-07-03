@@ -49,17 +49,19 @@ Most of the optional properties are omitted in the minimum model for clarity. Th
 
 ### Describing the minimum model
 
-- Minimum metadata model 2026 Material
-- Minimum metadata model 2026 Event
-- MMM 2026 Expected Schemaorg Type
-- MMM 2026 Cardinality
-- MMM 2026 Values / CV
-- MMM 2026 Material Required
-- MMM 2026 Event Required
-- RDA Description
-- TeSS Description
-- Example 1 (Material)
-- Example 2 (Event)
+| Column | Description |
+|:---------|:------------|
+|Minimum metadata model 2026 Material | Name of property in Material |
+|Minimum metadata model 2026 Event | Name of property in Event |
+|MMM 2026 Expected Schemaorg Type | What Schema.org type(s) are expected |
+|MMM 2026 Cardinality | Could there be ONE or MANY values |
+|MMM 2026 Values / CV | What controlled vocabulary or values should be used |
+|MMM 2026 Material Required | Is this property required or recommended for Materials |
+|MMM 2026 Event Required | Is this property required or recommended for Events |
+|RDA Description | Property description from RDA metadata model |
+|TeSS Description |  Property description from the TeSS Platform  |
+|Example 1 (Material) | Populated real example of a Material |
+|Example 2 (Event) | Populated real example of an Event |
 
 
 
@@ -69,48 +71,62 @@ The columns in the full model are grouped as follows:
 
 ### Ingestion / core TeSS
 
-- Dublin Core
-- Can filter at TeSS exchange
-- Filter comment
-- TeSS Material property
-- TeSS Event property
-- Property comment
-- DC ingestion comment
+| Column | Description |
+|:-------|:------------|
+| Dublin Core | Source property from Dublin Core used as an input reference for mapping and ingestion. |
+| Can filter at TeSS exchange | Indicates whether this field can be used as a filter during TeSS content exchange workflows. |
+| Filter comment | Notes explaining filter logic, constraints, or usage guidance for exchange. |
+| TeSS Material property | Corresponding property name used in the TeSS data model for Materials. |
+| TeSS Event property | Corresponding property name used in the TeSS data model for Events. |
+| Property comment | General notes clarifying semantics, expected values, or implementation details of the property. |
+| DC ingestion comment | Notes specific to how Dublin Core values are interpreted, transformed, or handled during ingestion. |
 
 ### EOSC Training Resource Profile 2024
 
-- EOSC Training Property 2024
-- EOSC comment
+| Column | Description |
+|:-------|:------------|
+| EOSC Training Property 2024 | Corresponding property name from the EOSC Training Resource Profile (2024) used for crosswalk mapping. |
+| EOSC comment | Notes on interpretation, scope, or special considerations for EOSC profile alignment. |
 
 ### TeSSHub Minimum metadata model
-- Minimum metadata model 2026 Material
-- Minimum metadata model 2026 Event
-- MMM 2026 Expected Schemaorg Type
-- MMM 2026 Cardinality
-- MMM 2026 Values / CV
-- MMM 2026 Material Required
-- MMM 2026 Event Required
+| Column | Description |
+|:-------|:------------|
+| Minimum metadata model 2026 Material | Property name defined in the TeSSHub 2026 minimum model for Materials. |
+| Minimum metadata model 2026 Event | Property name defined in the TeSSHub 2026 minimum model for Events. |
+| MMM 2026 Expected Schemaorg Type | Expected Schema.org type(s) for values mapped to this property. |
+| MMM 2026 Cardinality | Expected number of values allowed (for example, one or many). |
+| MMM 2026 Values / CV | Expected value format or controlled vocabulary for this property. |
+| MMM 2026 Material Required | Requirement level for Materials (for example required, recommended, optional). |
+| MMM 2026 Event Required | Requirement level for Events (for example required, recommended, optional). |
 
 ### Bioschemas serialization 
-- Bioschemas property in TrainingMaterial
-- Bioschemas property in CourseInstance
-- Bioschemas serialised by TeSS
-- Bioschemas subproperties
-- Bioschemas notes
+| Column | Description |
+|:-------|:------------|
+| Bioschemas property in TrainingMaterial | Target Bioschemas property used when serializing a Material as TrainingMaterial. |
+| Bioschemas property in CourseInstance | Target Bioschemas property used when serializing an Event as CourseInstance. |
+| Bioschemas serialised by TeSS | Indicates whether and how the property is currently output by TeSS in Bioschemas markup. |
+| Bioschemas subproperties | Subproperty paths or nested fields relevant to the Bioschemas mapping. |
+| Bioschemas notes | Additional implementation notes, caveats, or version-specific guidance for Bioschemas. |
 
 ### DReSA
-- DReSA Material property
-- DReSA Event property
-- DReSA comment
+| Column | Description |
+|:-------|:------------|
+| DReSA Material property | Equivalent DReSA property used for mapping Material metadata. |
+| DReSA Event property | Equivalent DReSA property used for mapping Event metadata. |
+| DReSA comment | Notes about mapping assumptions, differences, or constraints for DReSA integration. |
 
 ### SciLifeLab
-- SciLifeLab Material property
-- SciLifeLab Event property
-- SciLifeLab comment
+| Column | Description |
+|:-------|:------------|
+| SciLifeLab Material property | Equivalent SciLifeLab property used for mapping Material metadata. |
+| SciLifeLab Event property | Equivalent SciLifeLab property used for mapping Event metadata. |
+| SciLifeLab comment | Notes about interoperability details, interpretation, or edge cases for SciLifeLab mappings. |
 
 ### RDA Learing Resource 2021
-- RDA Learning Resource Minimum 2021
-- RDA Description
+| Column | Description |
+|:-------|:------------|
+| RDA Learning Resource Minimum 2021 | Corresponding field in the RDA Learning Resource Metadata model (2021 minimum set). |
+| RDA Description | Official or adapted description text from the RDA model for contextual guidance. |
 
 ## Next steps
 
