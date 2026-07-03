@@ -16,26 +16,30 @@ dc:date,,,Date created,Start,,earliest date found,,,Date Created,Start Date,"Dat
 DateTime",ONE,ISO 8601,,Recommended,dateCreated,startDate,yes,,,Date created,Start,,Date created,,,,
 dc:date,,Could add,Date modified,End,,lastest date found,Version Date,,Date Modified,End Date,"Date
 DateTime","Material: ONE
-Event: MANY",ISO 8601,,Required,dateModified,endDate,yes,,,Date modified,End,,Date modified,,,Version Date,Version date for the most recently published or broadcast resource.
+Event: MANY",ISO 8601,,Recommended,dateModified,endDate,yes,,,Date modified,End,,Date modified,,,Version Date,Version date for the most recently published or broadcast resource.
 dc:contributor,,Should add (with Author),Contributors,Contributors,Should extend (roles),,,,Contributor(s)* [see Author(s)],Contrutor(s),"Person
 Organization",MANY,"Person: Name, URL (ORCID if exists).
 Organization: Name, URL (ROR if exists)",Recommended,Recommended,contributor,,yes MATERIALS,name,,Contributors,,,Contributors,,,,
-dc:rights,matches,,Licence,License,Should add to Event,,License,,License,,"CreativeWork
+dc:rights,matches,,Licence,,Should add to Event,,License,,License,,"CreativeWork
 URL",ONE,OSI,Required if exists,,license,,yes MATERIALS,,,Licence,,,Licensing and (re)use details,,Drop-down with common,Licence,"A license document that applies to this content, typically indicated by URL"
 dc:identifier,matches,,DOI,Identifier,Should address for Events,if doi; store as URI,,,DOI,Identifier,"PropertyValue
 Text
-URL",ONE,URL of DOI or equivalent identifier,Required if exists,Required if exists,identifier,,yes MATERIALS,,,DOI,,,DOI,,,,
+URL",ONE,URL of DOI or equivalent identifier,Required if exists,Required if exists,identifier,,yes MATERIALS,,PROPOSED EVENTS: Thing:identifier,DOI,,,DOI,,,,
 ,matches,,Target audiences,Target audiences,,,Target Group (Audience),,Target Group (Audience),Target Group (Audience),Text,MANY,,Recommended,Recommended,audience,audience,yes,"educationalRole, audienceType or name",,Target audiences,Target audiences,,Target audiences,Target audiences,,Target Group (Audience),Principal users(s) for which the resource was designed.
 ,,,Learning objectives,Learning objectives,,,Learning Outcome(s),,Learning Outcome(s),Learning Outcome(s),Text,MANY,It is recommended that you utilize terms from the Blooms taxonomy,Recommended,Recommended,teaches,teaches,yes,name (or direct),Multiple values are turned into a markdown bulleted list,Learning objectives,Learning objectives,,Learning outcomes,Learning outcomes,,Learning Outcome(s),"Descriptions of what knowledge, skills or abilities a learner should acquire on completion of the resource."
 ,matches,,Competency level,,,,Expertise Level,,Expertise Level,Expertise Level,"DefinedTerm
 Text
 URL",ONE,"Example from ELIXIR: Beginner, Intermediate, Advanced.
 Example from DALIA: Novice, Beginner, Competent, Proficient, Expert.
-Example from DReSA and DIRECT: Awareness, Working, Practitioner, Expert.",Recommended,Recommended,educationalLevel,,yes MATERIALS,name (or direct),"Currently will only accept: ""beginner"", ""intermediate"", ""advanced""",Competency level,,,Expertise (skill) level,,,Expertise (Skill) Level,"Target skill level in the topic being taught; example values include: beginner, intermediate, advanced."
+Example from DReSA and DIRECT: Awareness, Working, Practitioner, Expert.",Recommended,Recommended,educationalLevel,,yes MATERIALS,name (or direct),"Currently will only accept: ""beginner"", ""intermediate"", ""advanced"".
+PROPOSED EVENTS: ""EducationalEvent: educationalLevel
+(where EducationalEvent extends Event, we support it as well as Event, type is both CourseInstance and EducationalEvent)""",Competency level,,,Expertise (skill) level,,,Expertise (Skill) Level,"Target skill level in the topic being taught; example values include: beginner, intermediate, advanced."
 ,,,,,,,Resource URL Type,"It represents the type of the URL of the resource, that is the used scheme (e.g., Web Address URL, DOI, ARK, etc.). ",,,,,,,,,,,,,,,,,,,Resource URL Type,"Designation of the identifier scheme used for the resource URL , e.g., DOI, ARK, Handle."
-?,,Could add,Cost basis,Cost basis,Should add to Event,,Access Cost,,Access Cost,Access Cost,Text ,ONE,"Value and currency eg ""50 GBP""",Recommended,Recommended,,,,,EVENTS: missing offers from serialize,,Cost basis,,,Access cost,,Access Cost,Access cost: Choice stating whether or not there is a fee for use of the resource (CV = Y/N/Maybe with recommendation that further explanation of “Maybe” goes in the Description field for “It depends” or “It changes” explanations).
+?,,Could add,Cost basis,Cost basis,Should add to Event,,Access Cost,,Access Cost,Access Cost,Text ,ONE,"Value and currency eg ""50 GBP""",Recommended,Recommended,,,,,"EVENTS: missing offers from serialize
+PROPOSED: ""offers"": {""@type"": ""Offer"", ""price"": ""50"", ""priceCurrency"": ""GBP""  }",,Cost basis,,,Access cost,,Access Cost,Access cost: Choice stating whether or not there is a fee for use of the resource (CV = Y/N/Maybe with recommendation that further explanation of “Maybe” goes in the Description field for “It depends” or “It changes” explanations).
 dc:language,,Must extend,inLanguage,inLanguage,Must add to Material,,Primary Language,,Primary Language,Primary Language,"Language
-Text",MANY,IETF BCP 47,Recommended,Recommended,,,,,EVENTS: missing inLanguage from serialize,,,,Language,Language,,Primary language,Language in which the resource was originally published or made available.
+Text",MANY,IETF BCP 47,Recommended,Recommended,,,,,"EVENTS: missing inLanguage from serialize
+PROPOSED MATERIALS: inLanguage",,,,Language,Language,,Primary language,Language in which the resource was originally published or made available.
 dc:subject,,Must add,Scientific Topics,Scientific Topics,"Must address (CV, lookup)",,,,Scientific Topic(s) / Field(s) of Research,Scientific Topic(s) / Field(s) of Research,Text,MANY,"Varies by instance, eg EDAM (ELIXIR), PaNET (PaNOSC).",,,about,about,yes,name (or direct - see notes),"Takes the ""name"" property if it is on a ""DefinedTerm"". Takes the value from ""about"" if its a URI starting with ""http://edamontology.org""",Fields of Research,Fields of Research,Refer to ANZSRC,,Topic(s),"Tags like DDLS, PM",,
 ,,,Status,,,,,,,,,,,,,creativeWorkStatus,,yes MATERIALS,,,Status,,,Status,,,,
 ,,,Version,,,,,,,,,,,,,version,,yes MATERIALS,,,Version,,,Version,,,,
@@ -46,9 +50,9 @@ dc:subject,,Must add,Scientific Topics,Scientific Topics,"Must address (CV, look
 ,,,Events,,,,,,,,,,,,, -,,no,,,Events,,,Events,,,,
 ,,,Operations,Operations,,,,,,,,,,,, - , - ,no,,,,,,,,,,
 ?,,Should add (external tool),External resources,External resources,,,,,External Resources,External Resources,Thing,MANY,"Thing: Name, URL",Recommended,Recommended,mentions,mentions,yes,"name, url","EVENTS: Only available on ""Course""",External resources,,,,Associatted resources,,,
-,matches,,,Timezone,,,,,,Timezone,Text,ONE,RFC 822 4-digit time zone [TBC],,Recommended,, - ,no,,,,Timezone,,,,,,
+,matches,,,Timezone,,,,,,Timezone,Text,ONE,IANA RFC 6557,,Recommended,, - ,no,,,,Timezone,,,,,,
 ,,,,Duration,,,,,,,,,,,,,duration,no,,,,,,,Duration,,,
-,,,,Venue,,,,,,Location [Venue],Text ,ONE,(name and optional street address),,Required,,location,yes EVENTS,"Direct, or name + streetAddress","Will appear as ""name, streetAddress"" if both are provided",,Venue,,,Venue,,,
+,,,,Venue,,,,,,Location [Venue],Text ,ONE,(name and optional street address),,Recommended,,location,yes EVENTS,"Direct, or name + streetAddress","Will appear as ""name, streetAddress"" if both are provided",,Venue,,,Venue,,,
 ,matches,,,City,,,,,,Location [City],Text,ONE,,,Recommended,,location,yes EVENTS,addressLocality,"Address fields can be provided as a ""PostalAddress"" under the ""location"", or a ""Place"" which itself has an ""address"" which is a ""PostalAddress""",,City,,,City,,,
 ,,,,Region,,,,,,,,,,,,,location,yes EVENTS,addressRegion,https://schema.org/Place,,,,,,,,
 ,matches,,,Country,,,,,,Location [Country],Text,ONE,ISO 3166 2-character,,Recommended,,location,yes EVENTS,addressCountry,https://schema.org/PostalAddress,,Country,,,Country,,,
@@ -64,8 +68,18 @@ URL",MANY,"Text or URL, see examples here or https://zenodo.org/records/166378#.
 ,,,,Credit/recognition,,,,,,,,,,,,, - ,no,,,,,,,,,,
 ,,,,Sponsors,,,,,,,,,,,,,sponsor or funder,yes EVENTS,name,,,,,,,,,
 ,"matches, contains",,,Subtitle,,,,,,,,,,,,,alternateName,yes EVENTS,,,,,,,,,,
-?,,,Project,Project,"Must add (RAID, name)",,,,Project,Project,Project,MANY,"Organization: Name, URL (RAID PID if exists)",Required if exists,Required if exists,,,,,,,,,,,,,
-?,,,Funder,Funder,Must add (Dataverse requires),,,,Funder,Funder,Organization,MANY,"Organization: Name, URL (ROR if exists)",Required if exists,Required if exists,,,,,,,,,,,,,
+?,,,Project,Project,"Must add (RAID, name)",,,,Project,Project,Project,MANY,"Organization: Name, URL (RAID PID if exists)",Required if exists,Required if exists,,,,,"PROPOSED:
+ ""funding"": {
+     ""@type"": ""Grant"",
+     ""identifier"": <RAID PID or URL>,
+     ""funder"": {
+       ""@type"": ""Organization"",
+       ""name"": <name>,
+       ""identifier"": <ROR or URL>,
+       ""url"": <URL>      
+     }
+   }",,,,,,,,
+?,,,Funder,Funder,Must add (Dataverse requires),,,,Funder,Funder,Organization,MANY,"Organization: Name, URL (ROR if exists)",Required if exists,Required if exists,,,,,PROPOSED: See Project,,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,Other types,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,Subsets,,,,,,,
 ,,,,,,,,,,,,,,,,,,,,,Syllabus,,,,,,,
@@ -81,4 +95,4 @@ URL",MANY,"Text or URL, see examples here or https://zenodo.org/records/166378#.
 ,,,,,,,,,,,,,,,,,,,,,,,,Advancement,,eLearning only,,
 ,,,,,,,,,,,,,,,,citation,,,,,,,,Preferred citation,,,,
 ,,,,,,,,,,,,,,,,contributor,,,,,,,,Modification contact person,,,,
-,,,,Instructors,,,,,,Instructor(s),Person,MANY,"Person: Name, URL (ORCID if exists).",,Recommended,instructor,,,,,,,,,,,,
+,,,,Instructors,,,,,,Instructor(s),Person,MANY,"Person: Name, URL (ORCID if exists).",,Recommended,instructor,,,,PROPOSED: CourseInstance: instructor,,,,,,,,

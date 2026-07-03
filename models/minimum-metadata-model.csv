@@ -20,7 +20,7 @@ Date Created,Start Date,"Date
 DateTime",ONE,ISO 8601,,Recommended,,,2026-03-30,2026-10-04
 Date Modified,End Date,"Date
 DateTime","Material: ONE
-Event: MANY",ISO 8601,,Required,Version date for the most recently published or broadcast resource.,,2026-06-09,2026-10-09
+Event: MANY",ISO 8601,,Recommended,Version date for the most recently published or broadcast resource.,,2026-06-09,2026-10-09
 Contributor(s),Contrutor(s),"Person
 Organization",MANY,"Person: Name, URL (ORCID if exists).
 Organization: Name, URL (ROR if exists)",Recommended,Recommended,,"MATERIAL: Individuals or entities who provided specific assistance, technical input, data, or materials to the work but may not meet the full criteria for authorship. This field supports freetext name and ORCID.
@@ -57,9 +57,9 @@ Content Provider,Content Provider,Organization,ONE,"Organization: Name, URL (ROR
 ,,,,,,,,,,
 ,,,,,,,,,,
 External Resources,External Resources,Thing,MANY,"Thing: Name, URL",Recommended,Recommended,,"Include links to tools, policies, standards or databases to associate with this resource. For ELIXIR TeSS, you can search FAIRsharing, the ELIXIR Tools and Data Services Registry, or enter a title and URL.",,
-,Timezone,Text,ONE,RFC 822 4-digit time zone [TBC],,Recommended,,EVENT PROPOSED: The timezone [select from list],,
+,Timezone,Text,ONE,IANA RFC 6557,,Recommended,,EVENT PROPOSED: The timezone [select from list],,
 ,,,,,,,,,,
-,Location [Venue],Text ,ONE,(name and optional street address),,Required,,EVENT: Physical location of the event if its being conducted Face-to-face.,,
+,Location [Venue],Text ,ONE,(name and optional street address),,Recommended,,EVENT: Physical location of the event if its being conducted Face-to-face.,,
 ,Location [City],Text,ONE,,,Recommended,,EVENT: Physical location of the event if its being conducted Face-to-face.,,
 ,,,,,,,,,,
 ,Location [Country],Text,ONE,ISO 3166 2-character,,Recommended,,EVENT: Physical location of the event if its being conducted Face-to-face.,,GB
