@@ -138,17 +138,18 @@ A proposal will be made to the Bioschemas Training Group to adopt the recommende
 ## Acknowledgements
 - [mTeSS-X](https://elixirtess.github.io/mTeSS-X/): Scaling training portal federation for RIs through Multi-tenanting and Exchange ([OSCARS](https://www.oscars-project.eu/projects/mtess-x-scaling-training-portal-federation-ris-through-multi-tenanting-and-exchange))
 - [TeSSHub4EOSC](https://elixirtess.github.io/mTeSS-X/tesshub4eosc): training registry for EOSC nodes and science clusters ([EOSC Gravity](https://eosc.eu/horizon-europe-projects/tesshub4eosc))
-- ELIXIR Europe
-- PaNOSC
-- SciLifeLab
-- DReSA
-- Flemish RDM 
-- Bioschemas
-- RDA
-- EOSC Training and Competencies Working Group
-- OpenAIRE Training Community of Practice
-- The University of Manchester
-- Helmholtz Zentrum Dresden Rossendorf (HZDR)
-- CERN
-- University of Limerick
-- University of Tartu
+- [ELIXIR Europe](https://elixir-europe.org/)
+- [PaNOSC](https://www.panosc.eu/)
+- [SciLifeLab](https://www.scilifelab.se/)
+- [Digital Research Skills Australasia (DReSA)](https://dresa.org.au/)
+- [Flemish Research Data Management (RDM)](https://www.flemishrdm.be/)
+- [Bioschemas](https://bioschemas.org/)
+- [RDA Recommendations for a minimal metadata set to aid harmonised discovery of learning resources](https://doi.org/10.15497/RDA00073)
+- [EOSC Training and Competencies Working Group](https://eosc.eu/building-the-eosc-federation/contributing-to-the-build-up-phase/training-competencies-working-group)
+- [OpenAIRE Training Coordinators Community of Practice](https://www.openaire.eu/cop-training)
+- [Social Sciences & Humanities Open Cloud (SSHOC) D3.1 Report on SSHOC (meta)data interoperability problems](https://zenodo.org/records/3569868)
+- [The University of Manchester](https://www.manchester.ac.uk/)
+- [Helmholtz Zentrum Dresden Rossendorf (HZDR)](https://www.hzdr.de/)
+- [CERN](https://home.cern/)
+- [University of Limerick](https://www.ul.ie/)
+- [University of Tartu](https://ut.ee/en)
