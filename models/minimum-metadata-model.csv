@@ -57,7 +57,7 @@ Content Provider,Content Provider,Organization,ONE,"Organization: Name, URL (ROR
 ,,,,,,,,,,
 ,,,,,,,,,,
 External Resources,External Resources,Thing,MANY,"Thing: Name, URL",Recommended,Recommended,,"Include links to tools, policies, standards or databases to associate with this resource. For ELIXIR TeSS, you can search FAIRsharing, the ELIXIR Tools and Data Services Registry, or enter a title and URL.",,
-,Timezone,Text,ONE,IANA RFC 6557,,Recommended,,EVENT PROPOSED: The timezone [select from list],,
+,Timezone,Text,ONE,IANA,,Recommended,,EVENT PROPOSED: The timezone [select from list],,
 ,,,,,,,,,,
 ,Location [Venue],Text ,ONE,(name and optional street address),,Recommended,,EVENT: Physical location of the event if its being conducted Face-to-face.,,
 ,Location [City],Text,ONE,,,Recommended,,EVENT: Physical location of the event if its being conducted Face-to-face.,,

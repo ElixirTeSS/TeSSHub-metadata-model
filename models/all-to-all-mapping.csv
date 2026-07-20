@@ -50,7 +50,7 @@ dc:subject,,Must add,Scientific Topics,Scientific Topics,"Must address (CV, look
 ,,,Events,,,,,,,,,,,,, -,,no,,,Events,,,Events,,,,
 ,,,Operations,Operations,,,,,,,,,,,, - , - ,no,,,,,,,,,,
 ?,,Should add (external tool),External resources,External resources,,,,,External Resources,External Resources,Thing,MANY,"Thing: Name, URL",Recommended,Recommended,mentions,mentions,yes,"name, url","EVENTS: Only available on ""Course""",External resources,,,,Associatted resources,,,
-,matches,,,Timezone,,,,,,Timezone,Text,ONE,IANA RFC 6557,,Recommended,, - ,no,,,,Timezone,,,,,,
+,matches,,,Timezone,,,,,,Timezone,Text,ONE,IANA,,Recommended,, - ,no,,,,Timezone,,,,,,
 ,,,,Duration,,,,,,,,,,,,,duration,no,,,,,,,Duration,,,
 ,,,,Venue,,,,,,Location [Venue],Text ,ONE,(name and optional street address),,Recommended,,location,yes EVENTS,"Direct, or name + streetAddress","Will appear as ""name, streetAddress"" if both are provided",,Venue,,,Venue,,,
 ,matches,,,City,,,,,,Location [City],Text,ONE,,,Recommended,,location,yes EVENTS,addressLocality,"Address fields can be provided as a ""PostalAddress"" under the ""location"", or a ""Place"" which itself has an ""address"" which is a ""PostalAddress""",,City,,,City,,,
