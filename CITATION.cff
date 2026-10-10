@@ -42,7 +42,7 @@ authors:
     orcid: 'https://orcid.org/0000-0003-1219-2137'
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.21176106
+    value: 10.5281/zenodo.21458540
     description: TeSSHub metadata model
 repository-code: 'https://github.com/ElixirTeSS/TesSHub-metadata-model'
 url: 'https://github.com/ElixirTeSS/TesSHub-metadata-model'
@@ -55,5 +55,5 @@ keywords:
   - EOSC
   - minimum metadata model
 license: MIT
-version: 'v0.2_DRAFT'
-date-released: '2026-07-03'
+version: 'v1.0.0'
+date-released: '2026-07-20'

@@ -1,5 +1,5 @@
 # TeSSHub metadata model
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21176106.svg)](https://doi.org/10.5281/zenodo.21176106)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21458540.svg)](https://doi.org/10.5281/zenodo.21458540)
 
 Minimum metadata model and all-to-all exchange for the TeSS Platform, suitable for federation with EOSC.
 
@@ -23,7 +23,7 @@ The work continues through [TeSSHub4EOSC](https://eosc.eu/horizon-europe-project
 * It is a collection of properties and suggested vocabularies that are the minimum required for FAIR training material and event discovery and exchange. It considers materials being automatically ingested into a TeSSHub instance, either from the web or directly from another TeSSHub instance.  
 * This work considers materials and events side-by-side (a material is considered an event if it has a date and location). Previous work has focused on materials, not events.  
 * We add properties as advised by the mTeSS-X focus group and EOSC training and competencies working group, appropriate for the federation of materials across EOSC. 
-
+* The [attributes are described](https://doi.org/10.5281/zenodo.23270021) by the TeSSHub4EOSC EOSC Gravity interproject.
 
 ## Files
 
