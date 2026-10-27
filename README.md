@@ -1,9 +1,14 @@
-# TeSSHub metadata model
+# Minimum metadata model for Training Registry eXchange (TRX)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21458540.svg)](https://doi.org/10.5281/zenodo.21458540)
 
 Minimum metadata model and all-to-all exchange for the TeSS Platform, suitable for federation with EOSC.
 
+![TRX logo](images/rtx-metadata.svg)
+
 This model is the output from a series of online workshops where we define the metadata model used in the TeSS Platform for exchange with other training registries in any domain. We started with the mapping work from the mTeSS-X focus group then refined the outputs over events in February, March and May 2026. The goal was to reach a consensus of a minimum metadata model for exchange (all-against-all) that is appropriate for the federation of learning materials across EOSC. 
+
+> [!NOTE] 
+> See also a [summary of the model attributes](https://doi.org/10.5281/zenodo.23270020) written for the TeSSHub4EOSC project.
 
 
 ## Introduction
